@@ -1,38 +1,68 @@
-.App {
-  text-align: center;
+html {
+    background-color: #363636; color: white;
+    margin: 0; padding: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* For this project, the following spacing rules apply:
+    2rem - Large
+    1rem - Medium
+    .5rem- Small
+*/
+
+:root {
+    --project-gray: #161616;
+    --project-purple: #7b68ee;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+#nav {
+    background-color: var(--project-gray);
+    height: 100%; width: 15%;
+    left: 0; margin: 0; top: 0;
+    list-style-type: none;
+    padding-left: 0;
+    position: fixed;
+}
+.nav-item a {
+    font-size: 1.5rem;
+    text-decoration: none;
+}
+.nav-item {
+    padding: .5rem .5rem .5rem 1.5rem;
+}
+.nav-item:hover {
+    background-color: #262626;
+    border-radius: 10px;
+}
+.active {color: var(--project-purple);}
+.nav-item a:not(.active) {color: white;}
+
+.main-content {
+    float: right;
+    width: 85%;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.title {
+    margin: 2rem;
+    text-align: center;
 }
 
-.App-link {
-  color: #61dafb;
+.table-wrapper {
+    border: #262626 2px solid; border-radius: 10px;
+    margin: 2rem auto;
+    width: 40rem;
 }
+.stats {margin: auto; text-align: center;}
+.stats th {color: var(--project-gray);}
+.stats th, .stats td {padding: .5rem 1rem;}
+.stats tr:hover td {
+    color: var(--project-purple);
+    cursor: pointer;
+}
+.stats .team-name {font-size: 1.25rem; text-align: left !important;}
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+#year-selector {
+    background-color: transparent; color: var(--project-purple);
+    border: #262626 2px solid; border-radius: 10px;
+    font-size: 1.25rem;
+    margin: .5rem;
 }
